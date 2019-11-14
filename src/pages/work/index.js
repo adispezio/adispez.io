@@ -1,17 +1,21 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRoll'
+import WorkList from '../../components/WorkList'
 
-export default class BlogIndexPage extends React.Component {
+
+export default class WorkIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <h1>Blog</h1>
+          <h1>
+            Work
+          </h1>
         <section className="section">
           <div className="container">
             <div className="content">
-              <BlogRoll />
+              <WorkList />
             </div>
           </div>
         </section>
