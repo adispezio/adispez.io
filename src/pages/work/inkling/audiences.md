@@ -1,6 +1,7 @@
 ---
 templateKey: work-post
 title: Audiences
+path: audiences-foo
 date: 2016-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/flavor_wheel.jpg
@@ -9,6 +10,7 @@ tags:
   - ux design
   - prototyping
 ---
+
 ![flavor wheel](/img/flavor_wheel.jpg)
 
 
