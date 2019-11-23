@@ -4,18 +4,8 @@ title: Great coffee with a conscience
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
-mainpitch:
-  title: Why Kaldi
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Deisgner, developer, and educator.
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -68,3 +58,62 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli.
+
+
+<div class="row">
+  <div class="column">
+    <ul class="no-style">
+      <li>Workday</li>
+      <li>Starbucks</li>
+      <li>Teavana</li>
+      <li>Nest</li>
+      <li>Verizon</li>
+    </ul>
+  </div>
+  <div class="column">
+    <ul class="no-style">
+      <li>McDonalds</li>
+      <li>Allstate</li>
+      <li>Whole Foods</li>
+      <li>Benefit</li>
+      <li>Caterpilar</li>
+    </ul>
+  </div>
+</div>
+
+## Design systems and templates to help customer content shine.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.
+
+<section class="media-offset">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</section>
+
+## On-site trainings and workshops for client design teams
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<div class="media-offset media-layout-2">
+
+  <img src="../../static/img/training-1.png" />
+
+  ![](./speaking-1.png)
+
+</div>
+
+
+
+

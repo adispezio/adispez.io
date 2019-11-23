@@ -3,16 +3,19 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+
 import Layout from '../components/Layout'
+import WorkTitle from '../components/WorkTitle'
 import Content, { HTMLContent } from '../components/Content'
 
-export const ProjectPostTemplate = ({
+export const WorkPostTemplate = ({
   content,
   contentComponent,
   description,
   tags,
   title,
   helmet,
+  client
 }) => {
   const PostContent = contentComponent || Content
 
@@ -22,9 +25,11 @@ export const ProjectPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
+            <WorkTitle
+              title={title}
+              client={client}
+              description={description}
+            />
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -46,7 +51,7 @@ export const ProjectPostTemplate = ({
   )
 }
 
-ProjectPostTemplate.propTypes = {
+WorkPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -54,12 +59,12 @@ ProjectPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const ProjectPost = ({ data }) => {
+const WorkPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <ProjectPostTemplate
+      <WorkPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -74,21 +79,22 @@ const ProjectPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        title={post.frontmatter.title}
       />
     </Layout>
   )
 }
 
-ProjectPost.propTypes = {
+WorkPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default ProjectPost
+export default WorkPost
 
 export const pageQuery = graphql`
-  query ProjectPostByID($id: String!) {
+  query WorkPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

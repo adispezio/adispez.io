@@ -3,6 +3,12 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  font-size: 32px;
+`
+
 class WorkList extends React.Component {
   render() {
     const { data } = this.props
@@ -29,20 +35,18 @@ class WorkList extends React.Component {
                       {/* /> */}
                     </div>
                   ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
+                  <p>
+                    {/* <Link */}
+                    {/*   to={post.fields.slug} */}
+                    {/* > */}
+                      
+                    {/* </Link> */}
+                    {post.frontmatter.tags} @ {post.frontmatter.client}, {post.frontmatter.date}
+                    <Title>{post.frontmatter.description}</Title>
                   </p>
                 </header>
                 <p>
+                  {post.frontmatter.description}
                   {post.excerpt}
                   <br />
                   <br />
@@ -84,8 +88,11 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "MMM YYYY")
+                date(formatString: "YYYY")
+                description
+                client
                 featuredpost
+                tags
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {

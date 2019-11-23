@@ -54,11 +54,11 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 2048,
-              linkImagesToOriginal: false,
+              linkImagesToOriginal: false, // Use medium-zoom instad!
             },
           },
           {
-            resolve: `gatsby-remark-images-medium-zoom`, // point!
+            resolve: `gatsby-remark-images-medium-zoom`,
             options: {
               //...
             }
@@ -72,19 +72,20 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/all.scss'], // applies purging only on the bulma css file
-      },
-    }, // must be after other CSS plugins
+    // {
+    //   resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+    //   options: {
+    //     develop: true, // Activates purging in npm run develop
+    //     purgeOnly: ['/all.scss'], // applies purging only on the bulma css file
+    //   },
+    // }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

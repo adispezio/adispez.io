@@ -2,14 +2,34 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import './all.scss'
+
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
+import styled, { createGlobalStyle } from 'styled-components'
+import { Grid, Cell } from "styled-css-grid";
+import bp from './style-utils.js'
+
+import './all.scss'
+
+const GlobalStyle = createGlobalStyle`
+
+`
+const Content = styled.div`
+  max-width: 970px;
+  margin: 0 auto;
+`
+
+const HeroText = styled.h1`
+
+`
+
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
+
   return (
-    <div>
+    <React.Fragment>
+      <GlobalStyle />
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -38,6 +58,9 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,900&display=swap" rel="stylesheet" />>
+
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
@@ -48,10 +71,26 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
-      <Footer />
-    </div>
+        <Content>
+          <Grid 
+            columns={11} 
+            gap="20px">
+
+            <Cell width={3}>
+              <Navbar />
+            </Cell>
+
+            <Cell width={6}>
+              <>{children}</>
+            </Cell>
+
+            <Cell width={2}>
+            </Cell>
+
+          </Grid>
+        <Footer />
+      </Content>
+    </React.Fragment>
   )
 }
 
