@@ -15,10 +15,10 @@ import './all.scss'
 const GlobalStyle = createGlobalStyle`
 
 `
-const Content = styled.div`
-  max-width: 970px;
-  margin: 0 auto;
-`
+// const Content = styled.div`
+//   max-width: 970px;
+//   margin: 0 auto;
+// `
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
