@@ -20,10 +20,6 @@ const Content = styled.div`
   margin: 0 auto;
 `
 
-const HeroText = styled.h1`
-
-`
-
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
 
@@ -71,25 +67,9 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-        <Content>
-          <Grid 
-            columns={11} 
-            gap="20px">
-
-            <Cell width={3}>
-              <Navbar />
-            </Cell>
-
-            <Cell width={6}>
-              <>{children}</>
-            </Cell>
-
-            <Cell width={2}>
-            </Cell>
-
-          </Grid>
-        <Footer />
-      </Content>
+      {/* <Navbar/> */}
+      {children}
+      {/* <Footer /> */}
     </React.Fragment>
   )
 }

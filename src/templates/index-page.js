@@ -4,11 +4,11 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-// 
-// import Features from '../components/Features'
-// import BlogRoll from '../components/BlogRoll'
+
+import { Grid, Cell } from "styled-css-grid";
 
 import styled from 'styled-components'
+
 
 const customers = [
   "Workday",
@@ -64,6 +64,8 @@ export const IndexPageTemplate = ({
     <div>
       <Hero>{description}</Hero>
       <PageContent className="content" content={content} />
+      <p>fffLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli.</p>
+      
     </div>
   )
 }
@@ -110,7 +112,7 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
+  query IndexPageTemplateOld {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       html
       frontmatter {
