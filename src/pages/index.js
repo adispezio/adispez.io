@@ -128,8 +128,6 @@ const ListColumns = styled.div`
 `
 
 const IndexPage = ({ data }) => {
-  const { markdownRemark: post } = data
-
   return (
     <Layout>
       <Main>
