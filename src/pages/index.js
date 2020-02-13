@@ -139,40 +139,7 @@ const IndexPage = ({ data }) => {
           <H1>Deisgner, developer, and educator.</H1>
         </Headers>
         <Copy>
-          <p>For the past seven years, Anthony has had the unique opportunity to work closely with visual and instructional design teams from organizations around the world. </p>
-          <div className="row">
-            <ul className="column no-style">
-              <li>Workday</li>
-              <li>Starbucks</li>
-              <li>Teavana</li>
-              <li>Nest</li>
-              <li>Verizon</li>
-            </ul>
-            <ul className="column no-style">
-              <li>McDonalds</li>
-              <li>Liberty Mutual</li>
-              <li>Whole Foods</li>
-              <li>Benefit</li>
-              <li>Caterpilar</li>
-            </ul>
-          </div>
-          <h2>Design systems and templates to help customer content shine</h2>
-          <p>While at Inkling, Anthony was the lead designer and developer on over 40 customer implementations. Working directly with visual design teams, he designed templates for the Inkling authoring platform to translate the branding and voice for each customer. These content templates were also designed to educate authors on best practices at the point of need.</p>
-          <div className="row">
-            <div className="column">
-              <img src={client1} />
-            </div>
-            <div className="column">
-              <img src={client2} />
-            </div>
-          </div>
-          <h2>On-site trainings and workshops for client design teams</h2>
-          <p>In addition to technical development, Anthony also led on-site trainings to help customers understand the Inkling platform and best practices of digital content design. Trainings ranged from introductory webinars to multi-day advanced workshops.</p>
-          
-          <img src={trainspeak} />
-          <h2>Custom tools and prototypes for internal development</h2>
-          <p>Anthony also puts his programming skills to work developing custom Inkling plugins and prototypes for both customers and the Inkling R&D teams. Many of the plugins/tools were eventually shipped as true product features.</p>
-          <img className="border" src={tool1} />
+          <p></p>
         </Copy>
         <Hero>
           <img src={adispezio} />
