@@ -136,7 +136,7 @@ const IndexPage = ({ data }) => {
           <a href="https://www.linkedin.com/in/adispezio/">LinkedIn</a>
        </Nav>
         <Headers>
-          <H1>Deisgner, developer, and educator.</H1>
+          <H1>Designer, developer, and educator.</H1>
         </Headers>
         <Copy>
           <p></p>
